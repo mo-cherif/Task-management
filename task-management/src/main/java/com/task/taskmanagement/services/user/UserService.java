@@ -4,5 +4,5 @@ import com.task.taskmanagement.entities.User;
 
 public interface UserService {
     User signup(User user);
-    User signIn(String username, String password);
+    User signIn(String username);
 }
