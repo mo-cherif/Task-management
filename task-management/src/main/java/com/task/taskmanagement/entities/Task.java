@@ -1,5 +1,6 @@
 package com.task.taskmanagement.entities;
 
+import com.task.taskmanagement.enums.Status;
 import jakarta.persistence.*;
 import lombok.*;
 
