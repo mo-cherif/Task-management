@@ -17,11 +17,6 @@ public class TaskManagementApplication  {
 	@Bean
 	CommandLineRunner commandLineRunner(UserRepos userRepos) {
 		User user = userRepos.findByUsername("x");
-		if (user != null) {
-			System.out.println("****************** User Found\n" + user.toString());
-		} else {
-			System.out.println("User not found.");
-		}
 		return null;
 	}
 }
