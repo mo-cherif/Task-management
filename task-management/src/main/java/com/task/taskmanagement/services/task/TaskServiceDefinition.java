@@ -1,13 +1,16 @@
 package com.task.taskmanagement.services.task;
 
 import com.task.taskmanagement.entities.Task;
+import com.task.taskmanagement.repository.TaskRepos;
 
 import java.util.List;
 
-public class TaskDefinition implements TaskService {
+public class TaskServiceDefinition implements TaskService {
+    private TaskRepos taskRepos;
+
     @Override
     public Task create(Task task) {
-        return null;
+        return taskRepos.save(task);
     }
 
     @Override
