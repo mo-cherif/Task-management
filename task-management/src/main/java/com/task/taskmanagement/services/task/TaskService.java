@@ -7,7 +7,7 @@ import java.util.List;
 public interface TaskService {
     Task create(Task task);
 
-    Task delete(String id);
+    void delete(String id);
 
     List<Task> readAll();
 

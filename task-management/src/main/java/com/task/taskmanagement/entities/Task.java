@@ -21,9 +21,11 @@ public class Task {
 
     private String title;
     private String description;
+    @Enumerated(EnumType.STRING)
     private Status status;
     private Date date;
-    private Boolean priority;
+    @Column(name = "priority", columnDefinition = "BOOLEAN")
+    private boolean priority;
 
     @ManyToOne
     private User user;

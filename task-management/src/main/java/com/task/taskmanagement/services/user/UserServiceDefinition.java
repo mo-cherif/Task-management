@@ -19,6 +19,11 @@ public class UserServiceDefinition implements  UserService{
     }
 
     @Override
+    public User getOne(String id) {
+        return userRepos.findById(id).orElse(null);
+    }
+
+    @Override
     public User signIn(String username) {
         User findedUser = userRepos.findByUsername(username);
         User user = findedUser;
