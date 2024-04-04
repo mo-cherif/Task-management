@@ -34,6 +34,7 @@ public class TaskServiceDefinition implements TaskService {
     @Override
     public Task update(Task task, String id) {
         Task taskupdated = taskRepos.findById(id).orElse(null);
+        assert taskupdated != null;
         taskupdated.setDate(task.getDate());
         taskupdated.setTitle(task.getTitle());
         taskupdated.setDescription(task.getDescription());
